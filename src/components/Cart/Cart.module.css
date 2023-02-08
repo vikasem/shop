@@ -1,0 +1,28 @@
+.cart {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.item {
+    width: 23%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item .price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.item .name {
+    margin-left: 5px;
+}

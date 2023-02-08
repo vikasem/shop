@@ -1,9 +1,10 @@
 import React from 'react';
 import { Navigate, Route, Router, Routes } from 'react-router-dom';
 import './App.css';
+import Cart from './components/Cart/Cart';
+import CartContainer from './components/Cart/CartContainer';
 import Header from './components/Header';
 import Main from './components/Main/Main';
-import Menu from './components/Menu/Menu';
 import MenuContainer from './components/Menu/MenuContainer';
 
 let App = () => {
@@ -15,6 +16,7 @@ let App = () => {
         <Route exact path='/' element={<Navigate to={"/main"} />} />
         <Route path='/menu' element={<MenuContainer />} />
         <Route path='/main' element={<Main />} />
+        <Route path='/cart' element={<CartContainer />} />
       </Routes>
       </div>
     </div>

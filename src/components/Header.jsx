@@ -14,7 +14,9 @@ let Header = (props) => {
                     <span className={s.item}>
                         <NavLink to='/menu'>Одежда</NavLink>
                     </span>
-                    <span>Корзина</span>
+                    <span className={s.item}>
+                        <NavLink to='/cart'>Корзина</NavLink>
+                    </span>
                     <span>Избранное</span>
                 </nav>
             </div>
