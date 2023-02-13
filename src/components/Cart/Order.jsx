@@ -4,7 +4,6 @@ import s from "./Cart.module.css"
 let Order = (props) => {
     let deleteOrder = (id) => {
         console.log(id)
-        debugger;
         props.deleteOrderSuccess(id)
     }
     return (

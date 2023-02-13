@@ -7,6 +7,7 @@ let mapStateToProps = (state) => {
     return {
         items: state.menuPage.items,
         orders: state.cartPage.orders,
+        category: state.menuPage.category,
     }
 }
 
