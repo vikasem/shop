@@ -2,27 +2,111 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 40px;
+    /* justify-content: space-between; */
+    margin-top: 30px;
+}
+
+.empty {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.cartOrder {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.cartTitle {
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.ordering {
+    width: 400px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+
+.ordering .nameOrdering {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.ordering .location {
+    margin-bottom: 15px;
+}
+
+.ordering .sum, .ordering .discount, .ordering .total  {
+    display: inline-block;
+}
+
+.ordering .sumPrice, .ordering .discountPrice, .ordering .totalPrice {
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.ordering .total, .ordering .totalPrice {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ordering .payment {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .item {
-    width: 23%;
+    display: flex;
+    width: 100%;
     margin-bottom: 50px;
-    position: relative;
 }
 
 .item img {
+    width: 220px;
+}
+
+.item .info {
     width: 100%;
+    position: relative;
 }
 
 .item .price {
+    position: absolute;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    margin-top: 10px;
-    margin-left: 5px;
+    right: 30px;
+    top: 5px;
+    font-weight: 400;
 }
 
-.item .name {
-    margin-left: 5px;
+.item .name, .item .color, .item .sizeModel {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.deleteOrder {
+    position: absolute;
+    right: 60px;
+    bottom: 0px;
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.deleteOrder:hover {
+    opacity: 1;
+}
+
+.styleNumber {
+    font-family: 'Montserrat', sans-serif;
 }

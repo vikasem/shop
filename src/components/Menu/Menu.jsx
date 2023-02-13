@@ -5,7 +5,7 @@ let Menu = (props) => {
     return (
         <main className={s.menu}>
             {props.items.map(el => (
-                <Item item={el} addOrderSuccess={props.addOrderSuccess} />
+                <Item key={el.id} item={el} addOrderSuccess={props.addOrderSuccess} orders={props.orders} />
             ))}
         </main>
     )

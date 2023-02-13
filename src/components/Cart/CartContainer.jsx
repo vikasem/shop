@@ -1,5 +1,6 @@
 import { connect } from "react-redux"
 import Cart from "./Cart"
+import { deleteOrderSuccess } from "../../redux/cartReducer"
 
 let mapStateToProps = (state) => {
     return {
@@ -7,6 +8,6 @@ let mapStateToProps = (state) => {
     }
 }
 
-let CartContainer = connect(mapStateToProps,{})(Cart)
+let CartContainer = connect(mapStateToProps,{deleteOrderSuccess})(Cart)
 
 export default CartContainer

@@ -6,6 +6,7 @@ import { addOrderSuccess } from "../../redux/cartReducer";
 let mapStateToProps = (state) => {
     return {
         items: state.menuPage.items,
+        orders: state.cartPage.orders,
     }
 }
 

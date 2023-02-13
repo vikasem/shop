@@ -10,8 +10,8 @@ header .nav {
 
 header .nav span {
     display: inline;
-    margin-right: 25px;
     cursor: pointer;
+    margin-left: 25px;
 }
 
 header .nav span:hover {
