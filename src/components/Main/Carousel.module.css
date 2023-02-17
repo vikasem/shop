@@ -1,0 +1,33 @@
+.carouselItems {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.item {
+    width: 14%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item img:hover {
+    cursor: pointer;
+}
+
+.item .price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.item .name {
+    margin-left: 5px;
+    font-size: 15px;
+}

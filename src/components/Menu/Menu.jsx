@@ -4,8 +4,6 @@ import s from "./Menu.module.css"
 let Menu = (props) => {
     let filterByCategory = (category) => {
         props.filterByCategorySuccess(category)
-        // console.log(props.items);
-        // console.log(props.filterItems)
     }
     let showAll = () => {
         props.showAllSuccess()
