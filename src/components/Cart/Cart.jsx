@@ -24,7 +24,6 @@ let FullCart = (props) => {
             <div className={s.cartOrder}>
                 <div className={s.cartTitle}>
                     <span className={s.cartName}>Корзина</span>
-                    {/* <span className={s.sumItems}>{props.orders.length} товара</span> */}
                 </div>
                 {
                     props.orders.map(el => (<Order key={el.id} item={el} deleteOrderSuccess={props.deleteOrderSuccess} />))

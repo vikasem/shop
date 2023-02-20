@@ -1,3 +1,31 @@
+.popular{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.carousel {
+    position: relative;
+}
+
+.buttonLeft, .buttonRight {
+    background-color: white;
+    padding: 15px;
+    font-size: 30px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 50;
+}
+
+.buttonLeft {
+    top: 100px;
+}
+
+.buttonRight {
+    top: 100px;
+    right: 0px;
+}
+
 .carouselItems {
     display: flex;
     width: 100%;

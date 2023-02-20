@@ -15,7 +15,7 @@ let cartReducer = (state = initialState, action) => {
         case DELETE_ORDER_SUCCESS:
             return {
                 ...state,
-                orders: state.orders.filter(el => el.id != action.id)
+                orders: state.orders.filter(el => el.id !== action.id)
             }
         default:
             return state

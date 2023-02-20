@@ -7,7 +7,7 @@ let Item = (props) => {
     let addOrder = (order) => {
         let isInArray = false 
         props.orders.forEach(el => {
-            if (el.id == order.id){
+            if (el.id === order.id){
                 isInArray = true 
             }
         })

@@ -2,6 +2,7 @@ import React from "react"
 import { useState } from "react";
 import ItemCarousel from "./ItemCarousel";
 import s from "./Carousel.module.css"
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 let CarouselGoods = (props) => {
     let totalCount = props.items.length
@@ -12,19 +13,23 @@ let CarouselGoods = (props) => {
     let rightPortionNumber = portionNumber * props.portionSize
     return (
         <div>
-            {portionNumber > 1 &&
-                <div onClick={() => { setPortionNumber(portionNumber - 1) }}>туда</div>}
-            <div className={s.carouselItems}>
-                {props.items
-                    .filter(el => el.id >= leftPortionNumber && el.id <= rightPortionNumber)
-                    .map(el => (
-                        <ItemCarousel item={el} />
-                    ))
-                }
+            <div className={s.popular}>Популярное</div>
+            <div className={s.carousel}>
+                {portionNumber > 1 &&
+                    <AiOutlineLeft className={s.buttonLeft} onClick={() => { setPortionNumber(portionNumber - 1) }} />}
+                <div className={s.carouselItems}>
+                    {props.items
+                        .filter(el => el.id >= leftPortionNumber && el.id <= rightPortionNumber)
+                        .map(el => (
+                            <ItemCarousel item={el} key={el.id} />
+                        ))
+                    }
+                </div>
+                {portionNumber < portionCount &&
+                    <AiOutlineRight className={s.buttonRight} onClick={() => { setPortionNumber(portionNumber + 1) }} />}
             </div>
-            {portionNumber < portionCount &&
-                <div onClick={() => { setPortionNumber(portionNumber + 1) }}>сюда</div>}
         </div>
+
     )
 }
 
