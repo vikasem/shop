@@ -1,9 +1,8 @@
 import React from 'react';
 import { Navigate, Route, Router, Routes } from 'react-router-dom';
 import './App.css';
-import Cart from './components/Cart/Cart';
 import CartContainer from './components/Cart/CartContainer';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import MainContainer from './components/Main/MainContainer';
 import MenuContainer from './components/Menu/MenuContainer';
 
