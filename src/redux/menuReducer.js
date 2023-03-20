@@ -343,23 +343,28 @@ let initialState = {
     category:[
         {
             id: 1,
-            name:"Платье"
+            name:"Платье",
+            nameEng:"dress",
         },
         {
             id: 2,
-            name:"Рубашка"
+            name:"Рубашка",
+            nameEng:"shirt",
         },
         {
             id: 3,
-            name:"Юбка"
+            name:"Юбка",
+            nameEng:"skirt",
         },
         {
             id: 4,
-            name:"Брюки"
+            name:"Брюки",
+            nameEng:"trousers",
         },
         {
             id: 5,
-            name:"Топ"
+            name:"Топ",
+            nameEng:"top",
         },
     ],
     filterItems: [
@@ -644,19 +649,23 @@ let initialState = {
             sizeModel: 42
         },
     ],
+    categoryName: {},
 }
 
 let menuReducer = (state = initialState, action) => {
     switch (action.type) {
         case FILTER_BY_CATEGORY:
+            debugger;
             return {
                 ...state,
-                filterItems:state.items.filter(el=>el.category === action.category)
+                categoryName:state.category.find(el => el.nameEng === action.category),
+                //filterItems:state.items.filter(el=>el.category === action.category)
+                filterItems:state.items.filter(el=>el.category === state.categoryName.name)
             }
         case SHOW_ALL:
             return {
                 ...state,
-                filterItems: state.items
+                filterItems: state.items,
             }
         default:
             return state

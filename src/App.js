@@ -13,6 +13,7 @@ let App = () => {
       <div>
       <Routes>
         <Route exact path='/' element={<Navigate to={"/main"} />} />
+        <Route path='/menu/:categoryName' element={<MenuContainer />} />
         <Route path='/menu' element={<MenuContainer />} />
         <Route path='/main' element={<MainContainer />} />
         <Route path='/cart' element={<CartContainer />} />

@@ -14,13 +14,20 @@
     padding: 10px;
 }
 
-.category .nameCategory {
-    font-weight: 500;
+.category a {
+    /* display:block; */
     cursor: pointer;
-    padding: 10px;
+    text-decoration: none;
 }
 
-.category .nameCategory:hover, .category .clothesName:hover {
+.nameCategory {
+    display:block;
+    color: black;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.nameCategory:hover, .category .clothesName:hover {
     background-color: rgb(235, 225, 225);
 }
 
