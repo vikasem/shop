@@ -1,5 +1,6 @@
 const FILTER_BY_CATEGORY = 'menu/FILTER_BY_CATEGORY'
 const SHOW_ALL = 'menu/SHOW_ALL'
+const SET_CATEGORY = 'menu/SET_CATEGORY'
 
 let initialState = {
     items: [
@@ -654,11 +655,17 @@ let initialState = {
 
 let menuReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FILTER_BY_CATEGORY:
-            debugger;
+        case SET_CATEGORY:
             return {
                 ...state,
                 categoryName:state.category.find(el => el.nameEng === action.category),
+                //filterItems:state.items.filter(el=>el.category === action.category)
+                //filterItems:state.items.filter(el=>el.category === state.categoryName.name)
+            }
+        case FILTER_BY_CATEGORY:
+            return {
+                ...state,
+                //categoryName:state.category.find(el => el.nameEng === action.category),
                 //filterItems:state.items.filter(el=>el.category === action.category)
                 filterItems:state.items.filter(el=>el.category === state.categoryName.name)
             }
@@ -672,8 +679,14 @@ let menuReducer = (state = initialState, action) => {
     }
 }
 
-export let filterByCategorySuccess = (category) => ({ type: FILTER_BY_CATEGORY, category })
+export let filterByCategorySuccess = () => ({ type: FILTER_BY_CATEGORY })
+export let setCategory = (category) => ({ type: SET_CATEGORY, category })
 export let showAllSuccess = () => ({type: SHOW_ALL})
+
+export let filterByCategory = (category) => (dispatch) => {
+    dispatch(setCategory(category))
+    dispatch(filterByCategorySuccess())
+}
 
 
 export default menuReducer

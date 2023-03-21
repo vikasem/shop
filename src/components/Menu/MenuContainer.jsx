@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Menu from "./Menu";
 import { addOrderSuccess } from "../../redux/cartReducer";
-import { filterByCategorySuccess, showAllSuccess } from "../../redux/menuReducer";
+import { filterByCategory, showAllSuccess } from "../../redux/menuReducer";
 import {
     useLocation,
     useNavigate,
@@ -24,7 +24,7 @@ let MenuContainer = (props) => {
     useEffect(()=> {
         let category_name = params.categoryName
         if (category_name){
-            props.filterByCategorySuccess(category_name)
+            props.filterByCategory(category_name)
         }
     },[params.categoryName])
     return(
@@ -33,10 +33,10 @@ let MenuContainer = (props) => {
         category={props.category}
         filterItems={props.filterItems}
         addOrderSuccess={props.addOrderSuccess}
-        filterByCategorySuccess={props.filterByCategorySuccess}
+        filterByCategory={props.filterByCategory}
         showAllSuccess={props.showAllSuccess}
         />
     )
 }
 
-export default connect(mapStateToProps,{addOrderSuccess, filterByCategorySuccess, showAllSuccess})(MenuContainer)
+export default connect(mapStateToProps,{addOrderSuccess, filterByCategory, showAllSuccess})(MenuContainer)
