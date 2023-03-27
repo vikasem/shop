@@ -1,6 +1,8 @@
 import Main from "./Main"
 import { connect } from "react-redux";
 import { addOrderSuccess } from "../../redux/cartReducer";
+import { loadItems, loadCategory } from "../../redux/menuReducer";
+
 
 let mapStateToProps = (state) => {
     return {
@@ -9,6 +11,6 @@ let mapStateToProps = (state) => {
     }
 }
 
-let MainContainer = connect(mapStateToProps,{addOrderSuccess})(Main)
+let MainContainer = connect(mapStateToProps,{addOrderSuccess, loadItems, loadCategory})(Main)
 
 export default MainContainer

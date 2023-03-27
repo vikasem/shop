@@ -3,9 +3,6 @@ import { NavLink } from "react-router-dom";
 import s from "./Menu.module.css"
 
 let MenuBlock = (props) => {
-    let filterByCategory = (category) => {
-        props.filterByCategorySuccess(category)
-    }
     let showAll = () => {
         props.showAllSuccess()
     }

@@ -2,14 +2,14 @@ import React from 'react';
 import { Navigate, Route, Router, Routes } from 'react-router-dom';
 import './App.css';
 import CartContainer from './components/Cart/CartContainer';
-import Header from './components/Header/Header';
+import HeaderContainer from './components/Header/HeaderContainer';
 import MainContainer from './components/Main/MainContainer';
 import MenuContainer from './components/Menu/MenuContainer';
 
 let App = () => {
   return (
     <div className="App">
-      <Header />
+      <HeaderContainer />
       <div>
       <Routes>
         <Route exact path='/' element={<Navigate to={"/main"} />} />

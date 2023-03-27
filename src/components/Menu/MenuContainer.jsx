@@ -20,7 +20,6 @@ let mapStateToProps = (state) => {
 
 let MenuContainer = (props) => {
     let params = useParams();
-    console.log(params);
     useEffect(()=> {
         let category_name = params.categoryName
         if (category_name){
@@ -33,7 +32,6 @@ let MenuContainer = (props) => {
         category={props.category}
         filterItems={props.filterItems}
         addOrderSuccess={props.addOrderSuccess}
-        filterByCategory={props.filterByCategory}
         showAllSuccess={props.showAllSuccess}
         />
     )

@@ -8,16 +8,17 @@
     margin-right: 20px;
 }
 
-.category .clothesName {
-    font-weight: 600;
-    cursor: pointer;
-    padding: 10px;
-}
-
 .category a {
     /* display:block; */
     cursor: pointer;
     text-decoration: none;
+    color: black;
+}
+
+.clothesName {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
 }
 
 .nameCategory {
@@ -27,7 +28,7 @@
     font-weight: 500;
 }
 
-.nameCategory:hover, .category .clothesName:hover {
+.nameCategory:hover, .clothesName:hover {
     background-color: rgb(235, 225, 225);
 }
 

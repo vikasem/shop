@@ -3,6 +3,10 @@ import { NavLink } from "react-router-dom";
 import s from "./Header.module.css"
 
 let Header = (props) => {
+    let showAll = () => {
+        debugger;
+        props.showAllSuccess()
+    }
     return (
         <header>
             <div>
@@ -12,7 +16,7 @@ let Header = (props) => {
                         <NavLink to='/main'>Главная</NavLink>
                     </span>
                     <span className={s.item}>
-                        <NavLink to='/menu'>Одежда</NavLink>
+                        <NavLink to='/menu' onClick={() => { showAll() }}>Одежда</NavLink>
                     </span>
                     <span className={s.item}>
                         <NavLink to='/cart'>Корзина</NavLink>

@@ -16,7 +16,7 @@ let Menu = (props) => {
                     <Item key={el.id} item={el} addOrderSuccess={props.addOrderSuccess} orders={props.orders} />
                 ))}
             </div> */}
-            <MenuBlock filterByCategorySuccess={props.filterByCategory} showAllSuccess={props.showAllSuccess} category={props.category}/>
+            <MenuBlock showAllSuccess={props.showAllSuccess} category={props.category}/>
             <MenuCards filterItems={props.filterItems} addOrderSuccess={props.addOrderSuccess} orders={props.orders} />
         </main>
     )
