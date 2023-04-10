@@ -1,4 +1,4 @@
-import { showAllSuccess } from "../../redux/menuReducer";
+import { showAllSuccess } from "../../redux/menuReducer.ts";
 import { connect } from "react-redux";
 import Header from "./Header"
 

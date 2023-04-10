@@ -1,10 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
 import { NavLink } from "react-router-dom";
+import { CategoryType } from "../../types/types";
 import s from "./Menu.module.css"
 
-let MenuBlock = (props) => {
+type PropsType = {
+    showAllSuccess: () => void
+    category: Array<CategoryType>
+}
+
+let MenuBlock:FC<PropsType> = ({showAllSuccess, category}) => {
     let showAll = () => {
-        props.showAllSuccess()
+        showAllSuccess()
     }
     return (
         <div className={s.category}>
@@ -12,7 +18,7 @@ let MenuBlock = (props) => {
                 <div className={s.clothesName} onClick={() => { showAll() }}>ОДЕЖДА</div>
             </NavLink>
 
-            {props.category.map(el => (
+            {category.map(el => (
                 <NavLink to={'/menu/' + el.nameEng}>
                     <span className={s.nameCategory}>{el.name}</span>
                 </NavLink>))
@@ -20,7 +26,5 @@ let MenuBlock = (props) => {
         </div>
     )
 }
-
-// onClick={() => { filterByCategory(el.name) }}
 
 export default MenuBlock

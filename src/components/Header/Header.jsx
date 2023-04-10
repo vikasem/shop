@@ -4,7 +4,6 @@ import s from "./Header.module.css"
 
 let Header = (props) => {
     let showAll = () => {
-        debugger;
         props.showAllSuccess()
     }
     return (

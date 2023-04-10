@@ -1,7 +1,7 @@
 import Main from "./Main"
 import { connect } from "react-redux";
-import { addOrderSuccess } from "../../redux/cartReducer";
-import { loadItems, loadCategory } from "../../redux/menuReducer";
+import { addOrderSuccess } from "../../redux/cartReducer.ts";
+import { loadItems, loadCategory } from "../../redux/menuReducer.ts";
 
 
 let mapStateToProps = (state) => {

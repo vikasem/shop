@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import Menu from "./Menu";
-import { addOrderSuccess } from "../../redux/cartReducer";
-import { filterByCategory, showAllSuccess } from "../../redux/menuReducer";
+import Menu from "./Menu.tsx";
+import { addOrderSuccess } from "../../redux/cartReducer.ts";
+import { filterByCategory, showAllSuccess } from "../../redux/menuReducer.ts";
 import {
     useLocation,
     useNavigate,

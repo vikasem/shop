@@ -1,6 +1,6 @@
 import { connect } from "react-redux"
 import Cart from "./Cart"
-import { deleteOrderSuccess } from "../../redux/cartReducer"
+import { deleteOrderSuccess } from "../../redux/cartReducer.ts"
 
 let mapStateToProps = (state) => {
     return {
